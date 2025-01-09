@@ -1,4 +1,9 @@
-
+.round-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensures the image scales properly */
+}
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;
