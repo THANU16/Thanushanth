@@ -384,6 +384,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    visibility: visible; /* Make the image always visible */
+    transform: rotate(0deg); /* Initial state */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for hover effects */
 }
 
 .portfolio-item .portfolio-img .portfolio-img-inner img {
@@ -398,13 +401,7 @@
     justify-content: end;
 }
 
-.portfolio-content .portfolio-item .portfolio-img .portfolio-img-inner {
-    visibility: hidden;
-    transition: 0.5s;
-}
-
 .portfolio-content .portfolio-item:hover .portfolio-img .portfolio-img-inner {
-    visibility: visible;
     transform: rotate(-6deg);
 }
 /*** Portfolio End ***/
