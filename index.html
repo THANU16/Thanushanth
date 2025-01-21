@@ -987,11 +987,22 @@
                                             const email = document.getElementById('email').value;
                                             const subject = document.getElementById('subject').value || "New Message";
                                             const message = document.getElementById('message').value;
+                                            // Format the mail content with separators and labels
+                                            const formattedMessage = `
+                                            ---------- Contact Details ----------
+                                            Name: ${name}
+                                            Phone: ${phone}
+                                            Email: ${email}
+                                            -------------------------------------
+                                            
+                                            ---------- Message ----------
+                                            ${message}
+                                            -------------------------------------
+                                                    `;
 
                                             // Format the mailto link
-                                            const mailtoLink = `mailto:kanagarajahthanushanth@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                                                `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`
-                                            )}`;
+                                            const mailtoLink = `mailto:kanagarajahthanushanth@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
+
 
                                             // Open the mail client
                                             window.location.href = mailtoLink;
